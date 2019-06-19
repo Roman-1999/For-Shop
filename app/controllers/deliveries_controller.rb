@@ -1,7 +1,6 @@
 class DeliveriesController < ApplicationController
   def index
-  end
-
-  def show
+    @q = Delivery.ransack(params[:q])
+    @delivery = @q.result(distinct: true)
   end
 end
