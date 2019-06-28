@@ -1,17 +1,17 @@
 <header>
   <div class="info">
-    <h2 class="title">Вітаємо Вас на нашому сайті</h5>
-    <h5 class="subtitle">Тут Ви можете переглянути стан вашого замовлення/ремонту, натиснувши на посилання нижче:</h5>
+    <h2 class="title wow fadeInDown" data-wow-duration="1s">Вітаємо Вас на нашому сайті</h5>
+    <h5 class="subtitle wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">Тут Ви можете переглянути стан вашого замовлення/ремонту, натиснувши на посилання нижче:</h5>
     <div class="search">
         <%= search_form_for @a, url: repairs_path do |f| %>
-          <%= f.search_field :number_eq, class:"input", placeholder: "Номер ремонту" %>
-          <%= f.submit "Пошук", class:"btn"%>
+          <%= f.search_field :number_eq, class:"input wow fadeInLeft", placeholder: "Номер ремонту" %>
+          <%= f.submit "Пошук", class:"btn wow fadeInRight"%>
         <% end %>
     </div>
     <div class="search">
         <%= search_form_for @b, url: deliveries_path do |f| %>
-          <%= f.search_field :number_eq, class:"input", placeholder: "Номер доставки" %>
-          <%= f.submit "Пошук", class:"btn"%>
+          <%= f.search_field :number_eq, class:"input wow fadeInLeft", placeholder: "Номер доставки" %>
+          <%= f.submit "Пошук", class:"btn wow fadeInRight"%>
         <% end %>
     </div>
   </div>
