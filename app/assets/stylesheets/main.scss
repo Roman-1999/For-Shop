@@ -2,6 +2,7 @@
   outline:none;
   a{
   text-decoration: none;
+  color: #fff;
   }
 }
 
@@ -15,6 +16,13 @@ body{
   }
 }
 
+.title{
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+
+
 .info{
   background: linear-gradient(0deg, #282828, #282828), url("https://bestcube.space/wp-content/uploads/0Jrvgf38V8.jpg");
 background-blend-mode: multiply, normal;
@@ -22,16 +30,13 @@ background-blend-mode: multiply, normal;
   text-align: center;
   padding: 20%;
 .title{
-  font-size: 32px;
-  font-weight: 900;
-  padding-bottom: 20px;
   color: #fff;
+  padding-bottom: 20px;
 }
 
 .subtitle{
   font-size: 24px;
   font-weight: 700;
-  padding-bottom: 20px;
   color: #fff;
 }
 
@@ -50,7 +55,6 @@ background-blend-mode: multiply, normal;
   background-color: #000126;
   color: #fff;
 }
-}
 
 .input{
   max-width: 450px;
@@ -68,4 +72,28 @@ background-blend-mode: multiply, normal;
   display: grid;
   margin: auto;
   padding-bottom: 20px;
+}
+
+}
+
+.navs-border{
+  height: 100px;
+  background: linear-gradient(0deg, #282828, #282828), url("https://bestcube.space/wp-content/uploads/0Jrvgf38V8.jpg");
+  background-blend-mode: multiply, normal;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  padding: 5%;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.content{
+  display: block;
+  max-width: 650px;
+  margin: 30px auto;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 20px;
 }

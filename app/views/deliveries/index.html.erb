@@ -1,18 +1,32 @@
+<div class="navs-border">
+<%= link_to "Головна", root_path %> --> Результат пошуку товара що доставляється
+</div>
+
 <% @delivery.each do |x|%>
-Номер товару: <%= x.number%>
-<br>
-Клієнт:
-<%=x.client%>
-<br>
-Ціна:
-<%= x.price %>
-<br>
-Приблизне місцезнаходження товару:
-<%=x.where%>
-<br>
-Статус: (забрав, не забрав, пошта попала в аварію і тд.)
-<%=x.status.name%>
-<br>
-Приблизне прибуття товару
-<%= x.end%>
+<div class="content">
+  <div class="item">
+    Номер товару:
+    <%= x.number%>
+  </div>
+  <div class="item">
+    Клієнт:
+    <%=x.client%>
+  </div>
+  <div class="item">
+    Ціна:
+    <%= x.price %>
+  </div>
+  <div class="item">
+    Місцезнаходження:
+    <%=x.where%>
+  </div>
+  <div class="item">
+    Статус товару:
+    <%=x.status.name%>
+  </div>
+  <div class="item">
+    Приблизний час прибуття товару:
+    <%=x.end.strftime("%d/%m/%Y %H:%M") %>
+  </div>
+</div>
 <% end%>

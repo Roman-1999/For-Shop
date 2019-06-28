@@ -1,25 +1,40 @@
+<div class="navs-border">
+<%= link_to "Головна", root_path %> --> Результат пошуку товара на ремонті
+</div>
+<div class="title">Результат пошуку:</div>
 <% @repair.each do |x|%>
-Назва техніки: <%= x.name%>
-<br>
-Код:
-<%= x.number%>
-<br>
-Власник техніки:
-<%=x.client%>
-<br>
-Ко ремонтує?)
-Ун:
-<%=x.worker%>
-<br>
-У якому відділені/місті/районі/селі/тощо знаходиться техніка:
-<%=x.where%>
-<br>
-Статус (Валяється у складі/В очікуванні запчастини/Зроблено/тощо)
-<%=x.status.name%>
-<br>
-Де бабки, Вася?
-<%x.price%>
-<br>
-Приблизно, буде зроблено у такий дедлайн:
-<%=x.end%>
+<div class="content">
+  <div class="item">
+    Назва техніки:
+    <%= x.name%>
+  </div>
+  <div class="item">
+    Код:
+    <%= x.number%>
+  </div>
+  <div class="item">
+    Власник техніки:
+    <%=x.client%>
+  </div>
+  <div class="item">
+    Закріплений спеціаліст:
+    <%=x.worker%>
+  </div>
+  <div class="item">
+    Місцезнаходження:
+    <%=x.where%>
+  </div>
+  <div class="item">
+    Статус товару:
+    <%=x.status.name%>
+  </div>
+  <div class="item">
+    До сплати:
+    <%x.price%>
+  </div>
+  <div class="item">
+    Приблизне закінчення виконання ремонту:
+    <%=x.end.strftime("%d/%m/%Y %H:%M") %>
+  </div>
+</div>
 <% end%>
