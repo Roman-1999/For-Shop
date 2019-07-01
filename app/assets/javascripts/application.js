@@ -14,3 +14,16 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$('#status').each(function(){
+  var recipient = $('#status').data('whatever');
+  if((recipient == "У роботі") || (recipient == "Прямує до магазину") || (recipient == "Знаходиться на складі")){
+    $('#status').addClass('yell');
+  }
+  else if((recipient == "Зроблено") || (recipient == "Доставлено у магазин")){
+    $('#status').addClass('green');
+  }
+  else{
+    $('#status').addClass('gray');
+  }
+});

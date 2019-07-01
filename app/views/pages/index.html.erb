@@ -4,14 +4,14 @@
     <h5 class="subtitle wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">Тут Ви можете переглянути стан вашого замовлення/ремонту, натиснувши на посилання нижче:</h5>
     <div class="search">
         <%= search_form_for @a, url: repairs_path do |f| %>
-          <%= f.search_field :number_eq, class:"input wow fadeInLeft", placeholder: "Номер ремонту" %>
-          <%= f.submit "Пошук", class:"btn wow fadeInRight"%>
+          <%= f.search_field :number_eq, class:"input wow fadeInLeft", placeholder: "Номер ремонту", 'data-wow-duration': "2s", 'data-wow-delay': ".9s" %>
+          <%= f.submit "Пошук", class:"btn wow fadeInRight", 'data-wow-duration': "2s", 'data-wow-delay': "1.2s"%>
         <% end %>
     </div>
     <div class="search">
         <%= search_form_for @b, url: deliveries_path do |f| %>
-          <%= f.search_field :number_eq, class:"input wow fadeInLeft", placeholder: "Номер доставки" %>
-          <%= f.submit "Пошук", class:"btn wow fadeInRight"%>
+          <%= f.search_field :number_eq, class:"input wow fadeInLeft", placeholder: "Номер доставки", 'data-wow-duration': "2s", 'data-wow-delay': "1.3s" %>
+          <%= f.submit "Пошук", class:"btn wow fadeInRight",'data-wow-duration': "2s", 'data-wow-delay': "1.6s"%>
         <% end %>
     </div>
   </div>
