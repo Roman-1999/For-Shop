@@ -1,9 +1,9 @@
-<div class="navs-border">
-<%= link_to "Головна", root_path %> --> Результат пошуку товара що доставляється
+<div class="navs-border wow fadeInLeft">
+<%= link_to "Головна", root_path, {'data-turbolinks'=>"false"} %> --> Результат пошуку товара що доставляється
 </div>
-
+<div class="title wow fadeInDown">Результат пошуку:</div>
 <% @delivery.each do |x|%>
-<div class="content">
+<div class="content wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
   <div class="item">
     Номер товару:
     <%= x.number%>
@@ -22,11 +22,27 @@
   </div>
   <div class="item">
     Статус товару:
+    <div id="status" data-whatever="<%=x.status.name%>">
     <%=x.status.name%>
+    </div>
   </div>
   <div class="item">
     Приблизний час прибуття товару:
     <%=x.end.strftime("%d/%m/%Y %H:%M") %>
   </div>
 </div>
+<script>
+$('#status').each(function(){
+  var recipient = $('#status').data('whatever');
+  if((recipient == "У роботі") || (recipient == "Прямує до магазину") || (recipient == "Знаходиться на складі")){
+    $('#status').addClass('yell');
+  }
+  else if((recipient == "Зроблено") || (recipient == "Доставлено у магазин")){
+    $('#status').addClass('green');
+  }
+  else{
+    $('#status').addClass('gray');
+  }
+});
+</script>
 <% end%>

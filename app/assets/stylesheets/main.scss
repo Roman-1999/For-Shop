@@ -97,3 +97,26 @@ background-blend-mode: multiply, normal;
   border-radius: 20px;
   padding: 20px;
 }
+
+#status{
+  display: inline;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.yell{
+  background-color: yellow;
+  font-weight: 900;
+}
+
+.green{
+  background-color: green;
+  color: #fff;
+  font-weight: 900;
+}
+
+.gray{
+  background-color: gray;
+  color: #fff;
+  font-weight: 900;
+}
